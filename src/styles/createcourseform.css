@@ -1,0 +1,14 @@
+.createcourseform-panel {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.createcourseform-heading {
+    font-weight: bold;
+}
+.createcourseform-label {
+    font-weight: 100;
+}
+.createcourseform-button {
+    float: right;
+}

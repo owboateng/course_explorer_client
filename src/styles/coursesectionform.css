@@ -1,0 +1,19 @@
+.coursesectionform-panel {
+  width: 100%;
+  margin: 0 auto;
+}
+.coursesectionform-heading {
+  font-weight: bold;
+}
+.coursesectionform-label {
+  font-weight: 100;
+}
+.coursesectionform-wysiwyg {
+  margin-top: 20px;
+}
+.coursesectionform-button-cancel {
+  float: left;
+}
+.coursesectionform-button-save {
+  float: right;
+}

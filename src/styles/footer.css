@@ -1,0 +1,19 @@
+.footer-wrapper {
+    background-color: #223C50;
+    width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    float: left;
+    color: white;
+    padding-top: 60px;
+}
+.footer-login {
+    text-align: right;
+    padding-right: 14.5%;
+}
+.footer-row {
+    margin-top: 7px;
+}
+.footer-row a {
+    color: white;
+}

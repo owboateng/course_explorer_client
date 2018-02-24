@@ -1,0 +1,52 @@
+.top-wrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: #1E252C;
+}
+.heading {
+    display: inline-block;
+    margin-left: 14%;
+    margin-top: 60px;
+    color: white;
+}
+.left, .center {
+    float: left;
+    margin-top: 50px;
+    height: 100%;
+}
+.left{
+  width: 16.5%;
+  margin-left: 14%;
+}
+.center {
+  width: 55%;
+  margin-left: 0.1%;
+}
+.panel {
+    min-height: 550px !important;
+}
+.listgroup a {
+    margin-bottom: 0px;
+    border: None;
+    border-bottom: 1px solid !important;
+    border-radius: 0px !important;
+}
+.add-section {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 50px;
+}
+.panel-heading {
+    height: 80px;
+    background-color: white !important;
+}
+.panel-heading span {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.panel-heading button {
+    float: right;
+    margin-top: 10px;
+}

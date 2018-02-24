@@ -1,0 +1,43 @@
+.main-content-wrapper {
+  min-height: 100vh;
+}
+.login-wrapper {
+  width: 35%;
+  min-height: 385px;
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: #223C50;
+}
+.login-inner-content {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.login-inner-content button {
+  width: 85% !important;
+  margin-left: 8%;
+  margin-top: 50px !important;
+  cursor: pointer;
+}
+.login-inner-content h1 {
+  width: 85%;
+  color: white;
+  font-family: 'Raleway';
+  margin-left: 8%;
+}
+.login-inner-content p {
+  width: 85%;
+  color: white;
+  margin-left: 8%;
+  font-size: 18px;
+}
+.login-inner-content .no-account {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.login-inner-content a {
+  color: #5DCBF8;
+}
+.login-inner-content button{
+  background: #5DCBF8 !important;
+}
