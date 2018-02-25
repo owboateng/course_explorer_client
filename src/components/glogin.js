@@ -16,8 +16,20 @@ class GLogin extends React.Component {
   }
 
   responseGoogle(response){
-    if (response.profileObj){
-      this.props.setLogin(true);
+    if (response.Zi){
+      fetch('http://localhost:5000/api/user/add',{
+        method: 'post',
+        body: JSON.stringify({
+          gg_token_id: response.Zi.id_token
+        })
+      })
+      .then(response => response.json())
+      .then(responseJSON => {
+        this.props.setLogin(true);
+      })
+      .catch(error => {
+        console.log(error);
+      })
     }
     else {
       this.props.setLogin(false);

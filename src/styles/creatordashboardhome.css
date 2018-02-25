@@ -1,32 +1,32 @@
 .creatordashboardhome-menu-wrapper {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    background-color: #1E252C;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background-color: #1E252C;
 }
 .creatordashboardhome-heading {
-    display: inline-block;
-    margin-left: 14.5%;
-    color: white;
+  display: inline-block;
+  margin-left: 14.5%;
+  color: white;
 }
 .creatordashboardhome-nav {
-    position: absolute;
-    width: 71%;
-    bottom: 0;
-    left: 14.5%;
+  position: absolute;
+  width: 71%;
+  bottom: 0;
+  left: 14.5%;
 }
 .creatordashboardhome-menu-detail-wrapper {
-    width: 71%;
-    margin: 0 auto;
-    margin-top: 70px;
+  width: 71%;
+  margin: 0 auto;
+  margin-top: 70px;
 }
 .creatordashboardhome-button-group {
-    width: 100%;
+  width: 100%;
 }
 .creatordashboardhome-menu-detail-button {
-    width: 25%;
-    height: 150px;
+  width: 25%;
+  height: 150px;
 }
 .not-first {
-    margin-top: 10px;
+  margin-top: 10px;
 }
