@@ -5,9 +5,9 @@ export function showSectionForm(show_section){
     payload: {show: show_section}
   }
 }
-export function setLogin(is_logged_in){
+export function setLogin(is_logged_in, id_token=''){
   return {
     type: types.SET_LOGIN_STATE,
-    payload: {loggedin: is_logged_in}
+    payload: {loggedin: is_logged_in, gg_id_token: id_token}
   }
 }

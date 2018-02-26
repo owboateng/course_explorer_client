@@ -23,9 +23,11 @@ class GLogin extends React.Component {
           gg_token_id: response.Zi.id_token
         })
       })
-      .then(response => response.json())
-      .then(responseJSON => {
-        this.props.setLogin(true);
+      .then(res => res.json())
+      .then(resjson => {
+        if (resjson.user_verified === true){
+          this.props.setLogin(true, response.Zi.id_token);
+        }
       })
       .catch(error => {
         console.log(error);

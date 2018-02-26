@@ -5,7 +5,7 @@ const login = (store, action) => {
   if (action.type === types.SET_LOGIN_STATE) {
     return action.payload;
   }
-  return store || {loggedin: false};
+  return store || {loggedin: false, gg_id_login: ''};
 };
 const sectionform = (store, action) => {
   if (action.type === types.SHOW_HIDE_SECTION_FORM) {
