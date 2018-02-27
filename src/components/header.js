@@ -46,14 +46,14 @@ class Header extends React.Component {
   }
 
   render() {
-    let loginprofile_button = <Button className='header-login' onClick={() => this.props.history.push('/login')}>Login</Button>; 
+    let loginprofile_button = <Button className='header-login' title='' onClick={() => this.props.history.push('/login')}>Login</Button>; 
     let dropdown = <NavDropdown className='header-dropdown' eventKey={4} title="More" id="basic-nav-dropdown" onSelect={this.handleDropdownClick}>
                     <MenuItem eventKey={4.1} onClick={() => this.props.history.push('/login')}>Become a Creator</MenuItem>
                     <MenuItem divider />
                     <MenuItem eventKey={4.2}>Help</MenuItem>
                   </NavDropdown>;
     if (this.props.login.loggedin){
-      loginprofile_button = <NavDropdown className='header-dropdown login-profile' eventKey={4} id="basic-nav-dropdown">
+      loginprofile_button = <NavDropdown className='header-dropdown login-profile' title='' eventKey={4} id="basic-nav-dropdown">
                               <MenuItem eventKey={4.1} onClick={() => this.props.history.push('/login')}>Profile</MenuItem>
                               <MenuItem divider />
                               <MenuItem eventKey={4.2}>
