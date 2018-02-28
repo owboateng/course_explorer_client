@@ -20,11 +20,18 @@
   margin: 0 auto;
   margin-top: 70px;
 }
+.creatordashboardhome-toolbar {
+  margin-bottom: 2px;
+}
 .creatordashboardhome-button-group {
   width: 100%;
 }
-.creatordashboardhome-menu-detail-button {
+.creatordashboardhome-menu-detail-button.course-name {
   width: 25%;
+  height: 150px;
+}
+.creatordashboardhome-menu-detail-button.info {
+  width: 70%;
   height: 150px;
 }
 .not-first {

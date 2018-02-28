@@ -17,7 +17,7 @@ class App extends Component {
           <Route exact path='/courses/:detail' component={CourseHome} />
           <Route exact={true} path='/course/create' component={CreateCourseHome} />
           <Route exact={true} path='/creator/dashboard/:detail' component={CreatorDashboardHome} />
-          <Route exact={true} path='/course/edit' component={CourseEditHome} />
+          <Route exact={true} path='/course/edit/:code/:name' component={CourseEditHome} />
         </Switch>
       </Router>
     );

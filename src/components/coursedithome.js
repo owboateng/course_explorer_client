@@ -19,7 +19,22 @@ class CourseEditHome extends React.Component {
     super(props);
 
     this.state = {
+      course: null
     }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:5000/api/course/' + this.props.match.params.code)
+    .then(res => res.json())
+    .then(resjson => {
+      this.setState({
+        course: resjson.course,
+      });
+    })
+    .catch(error => {
+      console.log(error);
+    });
+    this.props.showSectionForm(false);
   }
 
   render() {
@@ -35,12 +50,15 @@ class CourseEditHome extends React.Component {
       section_form = <CourseSectionForm />;
       add_section_button = '';
     }
+    let course_name = this.props.match.params.name;
     return (
       <div>
         <Header />
         <div className='main-content'>
           <div className='top-wrapper'>
-              <h3 className='heading'>Course Name</h3>
+              <h3 className='heading'>
+              {course_name.charAt(0).toUpperCase() + course_name.slice(1)}
+              </h3>
           </div>
           <div className='left'>
             <Panel className='panel'>
@@ -49,8 +67,8 @@ class CourseEditHome extends React.Component {
               </Panel.Heading>
               <Panel.Body>
                 <ListGroup className='listgroup'>
-                  <ListGroupItem href='#'>Course Info</ListGroupItem>
                   <ListGroupItem href='#'>Course sections</ListGroupItem>
+                  <ListGroupItem href='#'>Delete course</ListGroupItem>
                 </ListGroup>
               </Panel.Body>
             </Panel>

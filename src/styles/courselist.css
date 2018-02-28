@@ -1,16 +1,17 @@
 .courselist-wrapper {
-    width: 45%;
-    float: left;
-    padding-top: 20px;
-    margin-left: 2%;
+  width: 45%;
+  float: left;
+  padding-top: 20px;
+  margin-left: 2%;
 }
 .courselist-thumbnail-col {
-    padding-right: 0 !important;
-    padding-left: 5px !important;
+  padding-right: 0 !important;
+  padding-left: 5px !important;
+  cursor: pointer;
 }
 .courselist-container {
-    width: 100%;
+  width: 100%;
 }
 .courselist-thumbnail {
-    margin-bottom: 5px !important;
+  margin-bottom: 5px !important;
 }

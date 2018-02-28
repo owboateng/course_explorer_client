@@ -54,31 +54,31 @@ class CreateCourseForm extends React.Component {
 
   handleSubmit = () => {
     fetch('http://localhost:5000/api/course/add',{
-        method: 'post',
-        body: JSON.stringify({
-          course_name: this.state.value,
-          gg_token_id: this.props.login.gg_token_id
-        })
+      method: 'post',
+      body: JSON.stringify({
+        course_name: this.state.value,
+        gg_token_id: this.props.login.gg_token_id
       })
-      .then(res => res.json())
-      .then(resjson => {
-        if (!resjson.user_verified){
-          this.props.setLogin(false, '');
-        }
-        if (!resjson.course_created){
-          this.setState({
-            validation_state: 'error',
-            form_error: 'Course name exists',
-            proceed_disabled: true
-          });
-        }
-        else{
-          this.props.history.push('/creator/dashboard/courses');
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      })
+    })
+    .then(res => res.json())
+    .then(resjson => {
+      if (!resjson.user_verified){
+        this.props.setLogin(false, '');
+      }
+      if (!resjson.course_created){
+        this.setState({
+          validation_state: 'error',
+          form_error: 'Course name exists',
+          proceed_disabled: true
+        });
+      }
+      else{
+        this.props.history.push('/creator/dashboard/courses');
+      }
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   render() {

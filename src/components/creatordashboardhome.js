@@ -15,6 +15,22 @@ class CreatorDashboardHome extends React.Component {
   constructor(props){
     super(props);
 
+    this.state = {
+      courselist: []
+    }
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:5000/api/courses')
+    .then(res => res.json())
+    .then(resjson => {
+      this.setState({
+        courselist: resjson.courselist,
+      });
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   render() {
@@ -25,6 +41,21 @@ class CreatorDashboardHome extends React.Component {
       'courses': 1,
       'analytics': 2
     }
+    let rows = this.state.courselist.map((course) => {
+      return (
+        <ButtonToolbar className='creatordashboardhome-toolbar' key={course.code}>
+          <ButtonGroup className='creatordashboardhome-button-group'>
+            <Button 
+              className='creatordashboardhome-menu-detail-button course-name'
+              onClick={()=>this.props.history.push('/course/edit/' + course.code + '/' + course.name.toLowerCase())}
+            >
+              {course.name}
+            </Button>
+            <Button className='creatordashboardhome-menu-detail-button info'>Information</Button>
+          </ButtonGroup>
+        </ButtonToolbar>
+      );
+    });
     return (
       <div>
         <Header />
@@ -44,22 +75,7 @@ class CreatorDashboardHome extends React.Component {
             </Nav>
           </div>
           <div className='creatordashboardhome-menu-detail-wrapper'>
-            <ButtonToolbar className='toolbar'>
-              <ButtonGroup className='creatordashboardhome-button-group'>
-                <Button className='creatordashboardhome-menu-detail-button'>Course name</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Students</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Reviews</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Conversion</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
-            <ButtonToolbar className='creatordashboardhome-toolbar not-first'>
-              <ButtonGroup className='creatordashboardhome-button-group'>
-                <Button className='creatordashboardhome-menu-detail-button'>Course name</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Students</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Reviews</Button>
-                <Button className='creatordashboardhome-menu-detail-button'>Conversion</Button>
-              </ButtonGroup>
-            </ButtonToolbar>
+            {rows}
           </div>
         </div>
         <Footer />
