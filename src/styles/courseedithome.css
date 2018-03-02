@@ -23,12 +23,14 @@
   width: 55%;
   margin-left: 0.1%;
 }
-.panel {
+.courseedithome-panel {
     min-height: 550px !important;
 }
-.listgroup a {
+.courseedithome-listgroup li {
+  border: none !important;
+}
+.courseedithome-listgroup {
     margin-bottom: 0px;
-    border: None;
     border-bottom: 1px solid !important;
     border-radius: 0px !important;
 }
@@ -37,16 +39,19 @@
     margin-left: 25%;
     margin-top: 50px;
 }
-.panel-heading {
+.courseedithome-panel-heading {
     height: 80px;
     background-color: white !important;
 }
-.panel-heading span {
+.courseedithome-panel-heading span {
     display: inline-block;
     margin-top: 15px;
     font-size: 18px;
 }
-.panel-heading button {
+.courseedithome-panel-heading button {
     float: right;
     margin-top: 10px;
+}
+.course-preview {
+  margin-right: 10px;
 }

@@ -7,14 +7,13 @@ const login = (store, action) => {
   }
   return store || {loggedin: false, gg_id_login: ''};
 };
-const sectionform = (store, action) => {
-  if (action.type === types.SHOW_HIDE_SECTION_FORM) {
-    return action.payload;
-  }
-  return store || {show: false};
-}
+// const sectionform = (store, action) => {
+//   if (action.type === types.SHOW_HIDE_SECTION_FORM) {
+//     return action.payload;
+//   }
+//   return store || {show: false};
+// }
 
 export default combineReducers({
-    login,
-    sectionform
+  login
 });

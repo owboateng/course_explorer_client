@@ -51,7 +51,7 @@ class CreatorDashboardHome extends React.Component {
             >
               {course.name}
             </Button>
-            <Button className='creatordashboardhome-menu-detail-button info'>Information</Button>
+            <Button className='creatordashboardhome-menu-detail-button info'>Analytics</Button>
           </ButtonGroup>
         </ButtonToolbar>
       );
