@@ -5,6 +5,7 @@ import CourseHome from "./coursehome";
 import CreateCourseHome from './createcoursehome';
 import CreatorDashboardHome from './creatordashboardhome';
 import CourseEditHome from './coursedithome';
+import CourseDetailHome from './coursedetailHome';
 
 class App extends Component {
   render() {
@@ -15,9 +16,12 @@ class App extends Component {
           <Route exact path='/login' component={LoginHome} />
           <Redirect exact from='/courses/trending' to='/' />
           <Route exact path='/courses/:detail' component={CourseHome} />
-          <Route exact={true} path='/course/create' component={CreateCourseHome} />
-          <Route exact={true} path='/creator/dashboard/:detail' component={CreatorDashboardHome} />
-          <Route exact={true} path='/course/edit/:code/:name' component={CourseEditHome} />
+          <Route exact path='/course/create' component={CreateCourseHome} />
+          <Route exact path='/creator/dashboard/:detail' component={CreatorDashboardHome} />
+          <Route exact path='/course/edit/:code/:name' component={CourseEditHome} />
+          <Route exact path='/course/analytics/:code/:name' component={CourseEditHome} />
+          <Route exact path='/:course_code/:course_name/:section_id/:section_title' component={CourseDetailHome} />
+          <Route exact path='/:course_code/:course_name' component={CourseDetailHome} />
         </Switch>
       </Router>
     );

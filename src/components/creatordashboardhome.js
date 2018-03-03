@@ -37,10 +37,7 @@ class CreatorDashboardHome extends React.Component {
     if (!this.props.login.loggedin){
       return <Redirect to='/login'/>;
     }
-    let detail_map = {
-      'courses': 1,
-      'analytics': 2
-    }
+
     let rows = this.state.courselist.map((course) => {
       return (
         <ButtonToolbar className='creatordashboardhome-toolbar' key={course.code}>
@@ -51,7 +48,10 @@ class CreatorDashboardHome extends React.Component {
             >
               {course.name}
             </Button>
-            <Button className='creatordashboardhome-menu-detail-button info'>Analytics</Button>
+            <Button 
+              className='creatordashboardhome-menu-detail-button info'
+              onClick={()=>this.props.history.push('/course/analytics/' + course.code + '/' + course.name.toLowerCase())}
+            >Analytics</Button>
           </ButtonGroup>
         </ButtonToolbar>
       );
@@ -64,13 +64,10 @@ class CreatorDashboardHome extends React.Component {
             <h3 className='creatordashboardhome-heading'>Creator Dashboard</h3>
             <Nav className='creatordashboardhome-nav' 
               bsStyle='tabs' 
-              activeKey={detail_map[this.props.match.params.detail]}
+              activeKey={1}
             >
               <NavItem eventKey={1} onClick={() => this.props.history.push('/creator/dashboard/courses')}>
                 Courses
-              </NavItem>
-              <NavItem eventKey={2} onClick={() => this.props.history.push('/creator/dashboard/analytics')}>
-                Analytics
               </NavItem>
             </Nav>
           </div>

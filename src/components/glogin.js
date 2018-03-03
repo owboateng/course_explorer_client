@@ -61,7 +61,7 @@ class GLogin extends React.Component {
           />
           <p className='no-account'>
             <span>No Google account?</span>
-            <span> Create an account <a href='https://accounts.google.com/SignUp?hl=en' target='_blank'>here</a></span>
+            <span> Create an account <a href='https://accounts.google.com/SignUp?hl=en'>here</a></span>
           </p>
         </div>
       </div>

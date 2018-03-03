@@ -1,8 +1,9 @@
 .carousel {
-    width: 71.5%;
-    margin: 0 auto;
+  width: 71.5%;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 .image {
-    width: 100% !important;
-    height: 200px !important;
+  width: 100% !important;
+  height: 200px !important;
 }

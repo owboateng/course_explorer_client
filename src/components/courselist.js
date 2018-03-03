@@ -1,5 +1,7 @@
 import React from "react";
-import {Grid, Row, Col, Thumbnail, Button, } from 'react-bootstrap';
+import {Grid, Row, Col, Thumbnail} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import {replaceSpaceWithUnderscore} from '../util';
 
 import electrodepng from '../images/electrode.png';
 
@@ -50,11 +52,13 @@ export default class CourseList extends React.Component {
             lg={this.state.col_size} 
             className='courselist-thumbnail-col'
           >
-            <Thumbnail src={electrodepng} alt="242x200" className='courselist-thumbnail'>
-              <div >
-                <h6>Learn {this.state.courselist[j].name}</h6>
-              </div>
-            </Thumbnail>
+            <Link to={`/${this.state.courselist[j].code}/${replaceSpaceWithUnderscore(this.state.courselist[j].name.toLowerCase())}`}>
+              <Thumbnail src={electrodepng} alt="242x200" className='courselist-thumbnail'>
+                <div >
+                  <h6>Learn {this.state.courselist[j].name}</h6>
+                </div>
+              </Thumbnail>
+            </Link>
           </Col>
         );
       }

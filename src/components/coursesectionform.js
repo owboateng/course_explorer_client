@@ -4,8 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { withRouter } from 'react-router-dom';
 import CKEditor from 'react-ckeditor-component';
-import {Panel, Form, FormGroup, 
-  ControlLabel, FormControl, 
+import {Panel, Form, FormGroup, FormControl, 
   Button, HelpBlock} from 'react-bootstrap';
 import {setLogin} from '../actions';
 import {alphaNumericSpaceDash, stripHtml} from '../util';

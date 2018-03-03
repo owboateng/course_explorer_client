@@ -12,7 +12,7 @@ export default class CarouselForHome extends React.Component {
       <div>
         <Carousel slide={false} controls={false} className='carousel'>
           <Carousel.Item>
-            <img src={carousel_img} className='image'/>
+            <img src={carousel_img} className='image' alt=''/>
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

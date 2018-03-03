@@ -24,15 +24,19 @@
   margin-left: 0.1%;
 }
 .courseedithome-panel {
-    min-height: 550px !important;
+  min-height: 550px !important;
 }
-.courseedithome-listgroup li {
+.courseedithome-panel .side-panel {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.courseedithome-listgroup button {
   border: none !important;
+  width: 100% !important;
 }
 .courseedithome-listgroup {
     margin-bottom: 0px;
-    border-bottom: 1px solid !important;
-    border-radius: 0px !important;
+    
 }
 .add-section {
     width: 50%;

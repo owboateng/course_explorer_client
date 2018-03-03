@@ -8,9 +8,6 @@ class Footer extends React.Component {
   render() {
     return (
       <div className='footer-wrapper'>
-        <div className='footer-login'>
-          <Button  onClick={() => this.props.history.push('/login')}>Login</Button> 
-        </div>
         <Grid>
           <Row className='footer-row'>
             <Col sm={6} md={3}>

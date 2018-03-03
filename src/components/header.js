@@ -1,8 +1,8 @@
 import React from "react";
 import {withRouter} from 'react-router-dom';
 import {
-  Navbar, Nav, NavItem, NavDropdown, MenuItem, Button,
-  FormGroup, FormControl, Modal
+  Navbar, Nav, NavItem, NavDropdown, 
+  MenuItem, Button, Modal
 } from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -54,9 +54,7 @@ class Header extends React.Component {
                   </NavDropdown>;
     if (this.props.login.loggedin){
       loginprofile_button = <NavDropdown className='header-dropdown login-profile' title='' eventKey={4} id="basic-nav-dropdown">
-                              <MenuItem eventKey={4.1} onClick={() => this.props.history.push('/login')}>Profile</MenuItem>
-                              <MenuItem divider />
-                              <MenuItem eventKey={4.2}>
+                              <MenuItem eventKey={4.1}>
                                 <GoogleLogout buttonText="Logout" className='header-logout' onLogoutSuccess={this.handleLogout}/>
                               </MenuItem>
                             </NavDropdown>;
@@ -73,12 +71,12 @@ class Header extends React.Component {
         <Navbar inverse collapseOnSelect className='header-wrapper'>
           <Navbar.Header className='header-navbar-header'>
             <Navbar.Brand className='header-brand'>
-              <a onClick={() => this.props.history.push('/')}>Teachsomebody</a>
+              <a href='/'>Teachsomebody</a>
             </Navbar.Brand>
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav className='header-links' pullRight>
-              <NavItem eventKey={1} onClick={() => this.props.history.push('/')}>
+              <NavItem eventKey={1} href='/'>
                 Courses
               </NavItem>
               {dropdown}

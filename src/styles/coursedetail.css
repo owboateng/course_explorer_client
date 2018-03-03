@@ -1,0 +1,27 @@
+.course-detail-wrapper {
+  width: 59%;
+  float: left;
+  padding-top: 20px;
+  margin-left: 14%;
+}
+.sections-list, .section-text {
+  float: left;
+  min-height: 100vh;
+}
+.sections-list {
+  width: 30%;
+}
+.section-text {
+  width: 68%;
+  margin-left: 1.5%;
+}
+.sections-list .list-group-item {
+  border: none !important;
+  margin-bottom: 0.5px !important;
+  border-bottom: 1px solid !important;
+  border-radius: 0px !important;
+}
+.section-text .panel {
+  min-height: 100vh;
+  border-radius: 0 !important;
+}
