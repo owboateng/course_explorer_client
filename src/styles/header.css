@@ -24,9 +24,8 @@
 }
 .header-login {
   border-radius: 0px!important;
-  margin-top: 8px;
 }
-.header-logout {
+.login-profile ul li {
   width: 100%;
   background: none;
   border: none;
