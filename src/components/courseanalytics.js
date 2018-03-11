@@ -5,6 +5,10 @@ import {Panel} from 'react-bootstrap';
 
 import '../styles/courseanalytics.css';
 
+/** 
+ * Responsible for retrieving and rendering analytics 
+ * data of courses.
+*/
 class CourseAnalytics extends React.Component {
 
   constructor(props){

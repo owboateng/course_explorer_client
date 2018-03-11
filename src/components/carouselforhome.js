@@ -4,9 +4,10 @@ import {Carousel} from 'react-bootstrap';
 import carousel_img from '../images/pencil.jpg';
 import '../styles/carouselforhome.css';
 
-/**/
-
-export default class CarouselForHome extends React.Component {
+/**
+ * Represents a carousel with changing images on the homepage.
+ */
+class CarouselForHome extends React.Component {
   render() {
     return (
       <div>
@@ -23,3 +24,4 @@ export default class CarouselForHome extends React.Component {
     );
   }
 }
+export default CarouselForHome;

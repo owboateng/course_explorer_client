@@ -80,9 +80,5 @@ function mapStateToProps(state){
 	}
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-  }, dispatch);
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(CourseEditHome);
+export default connect(mapStateToProps, null)(CourseEditHome);

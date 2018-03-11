@@ -11,7 +11,7 @@ import {GoogleLogout} from 'react-google-login';
 
 import '../styles/header.css';
 
-class Header extends React.Component {
+export class Header extends React.Component {
 
   constructor(props){
     super(props);

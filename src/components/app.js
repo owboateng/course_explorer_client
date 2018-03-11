@@ -7,12 +7,6 @@ import CreatorDashboardHome from './creatordashboardhome';
 import CourseEditHome from './coursedithome';
 import CourseDetailHome from './coursedetailHome';
 
-/**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
- */
 class App extends Component {
   render() {
     return (

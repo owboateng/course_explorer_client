@@ -7,7 +7,7 @@ import {setLogin} from '../actions/index';
 
 import '../styles/glogin.css';
 
-class GLogin extends React.Component {
+export class GLogin extends React.Component {
 
   constructor(props){
     super(props);
@@ -17,7 +17,7 @@ class GLogin extends React.Component {
 
   responseGoogle(response){
     if (response.Zi){
-      fetch('http://localhost:5000/api/user/add',{
+      fetch('http://localhost:5000/api/user/add', {
         method: 'post',
         body: JSON.stringify({
           gg_token_id: response.Zi.id_token
